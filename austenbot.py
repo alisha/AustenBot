@@ -15,13 +15,13 @@ def createWordMap(wordLines):
 	startWords = {}
 	startIndex = 0
 
-	for lyric in wordLines:
-		line = lyric.split()
-		startWords[startIndex] = [line[0], line[1]]
+	for line in wordLines:
+		words = line.split()
+		startWords[startIndex] = [words[0], words[1]]
 		startIndex += 1
 
-		for index in range(0,len(line)-2):
-			wordMap[(line[index], line[index + 1])] = line[index + 2]
+		for index in range(0,len(words)-2):
+			wordMap[(words[index], words[index + 1])] = words[index + 2]
 
 	return [startWords, wordMap]
 
