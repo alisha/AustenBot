@@ -78,7 +78,7 @@ while hasMessage is False:
 		newMessage = message
 		char = newMessage[currentChar]
 		
-		if char is ".":
+		if char is "." and (newMessage[currentChar-3:currentChar+1] is not " Mr." or " Ms." or "Mrs."):
 			lastPeriod = currentChar
 			currentChar = -1
 		else:
@@ -93,8 +93,8 @@ print message
 print calculateChars(tweet)
 
 # Publish to Twitter
-auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+#auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+#auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-api = tweepy.API(auth)
-api.update_status(message)
+#api = tweepy.API(auth)
+#api.update_status(message)
