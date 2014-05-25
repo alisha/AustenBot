@@ -2260,8 +2260,7 @@ Will you read the letter? cried Harriet. Pray do. I'd rather you would.
 Emma was not sorry to be pressed. She read, and was surprized. The style of the letter was much above her expectation. There were not merely no grammatical errors, but as a composition it would not have disgraced a gentleman; the language, though plain, was strong and unaffected, and the sentiments it conveyed very much to the credit of the writer. It was short, but expressed good sense, warm attachment, liberality, propriety, even delicacy of feeling. She paused over it, while Harriet stood anxiously watching for her opinion, with a Well, well, and was at last forced to add, Is it a good letter? or is it too short? 
 Yes, indeed, a very good letter, replied Emma rather slowly so good a letter, Harriet, that every thing considered, I think one of his sisters must have helped him. I can hardly imagine the young man whom I saw talking with you the other day could express himself so well, if left quite to his own powers, and yet it is not the style of a woman; no, certainly, it is too strong and concise; not diffuse enough for a woman. No doubt he is a sensible man, and I suppose may have a natural talent for thinks strongly and clearly and when he takes a pen in hand, his thoughts naturally find proper words. It is so with some men. Yes, I understand the sort of mind. Vigorous, decided, with sentiments to a certain point, not coarse. A better written letter, Harriet (returning it,) than I had expected. 
 Well, said the still waiting Harriet; well and and what shall I do? 
-What shall you do! In what respect? Do you mean with regard to this letter? 
-Yes. 
+What shall you do! In what respect? Do you mean with regard to this letter? Yes. 
 But what are you in doubt of? You must answer it of course and speedily. 
 Yes. But what shall I say? Dear Miss Woodhouse, do advise me. 
 Oh no, no! the letter had much better be all your own. You will express yourself very properly, I am sure. There is no danger of your not being intelligible, which is the first thing. Your meaning must be unequivocal; no doubts or demurs: and such expressions of gratitude and concern for the pain you are inflicting as propriety requires, will present themselves unbidden to your mind, I am persuaded. You need not be prompted to write with the appearance of sorrow for his disappointment. 
@@ -2375,8 +2374,6 @@ I do not offer it for Miss Smith's collection, said he. Being my friend's, I hav
 The speech was more to Emma than to Harriet, which Emma could understand. There was deep consciousness about him, and he found it easier to meet her eye than her friend's. He was gone the next moment: after another moment's pause, 
 Take it, said Emma, smiling, and pushing the paper towards Harriet it is for you. Take your own. 
 But Harriet was in a tremor, and could not touch it; and Emma, never loth to be first, was obliged to examine it herself. 
- To Miss  
- CHARADE. 
  My first displays the wealth and pomp of kings, Lords of the earth! their luxury and ease. Another view of man, my second brings, Behold him there, the monarch of the seas! 
  But ah! united, what reverse we have! Man's boasted power and freedom, all are flown; Lord of the earth and sea, he bends a slave, And woman, lovely woman, reigns alone. 
  Thy ready wit the word will soon supply, May its approval beam in that soft eye! 
@@ -3041,8 +3038,7 @@ I declare, I do not know when I have heard any thing that has given me more sati
 Miss Woodhouse made the proper acquiescence; and finding that nothing more was to be entrapped from any communication of Mrs. Cole's, turned to Frank Churchill. 
 Why do you smile? said she. 
 Nay, why do you? 
-Me! I suppose I smile for pleasure at Colonel Campbell's being so rich and so liberal. It is a handsome present. 
-Very. 
+Me! I suppose I smile for pleasure at Colonel Campbell's being so rich and so liberal. It is a handsome present. Very. 
 I rather wonder that it was never made before. 
 Perhaps Miss Fairfax has never been staying here so long before. 
 Or that he did not give her the use of their own instrument which must now be shut up in London, untouched by any body. 
@@ -3138,10 +3134,8 @@ Are you sure? I saw she had execution, but I did not know she had any taste. Nob
 Just as they always do very vulgar. 
 They told me something, said Harriet rather hesitatingly; but it is nothing of any consequence. 
 Emma was obliged to ask what they had told her, though fearful of its producing Mr. Elton. 
-They told me that Mr. Martin dined with them last Saturday. 
-Oh! 
-He came to their father upon some business, and he asked him to stay to dinner. 
-Oh! 
+They told me that Mr. Martin dined with them last Saturday. Oh! 
+He came to their father upon some business, and he asked him to stay to dinner. Oh! 
 They talked a great deal about him, especially Anne Cox. I do not know what she meant, but she asked me if I thought I should go and stay there again next summer. 
 She meant to be impertinently curious, just as such an Anne Cox should be. 
 She said he was very agreeable the day he dined there. He sat by her at dinner. Miss Nash thinks either of the Coxes would be very glad to marry him. 
@@ -3584,8 +3578,7 @@ Well, Emma, I do not believe I have any thing more to say about the boys; but yo
 I rather hope to satisfy you both, said Emma, for I shall do all in my power to make them happy, which will be enough for Isabella; and happiness must preclude false indulgence and physic. 
 And if you find them troublesome, you must send them home again. 
 That is very likely. You think so, do not you? 
-I hope I am aware that they may be too noisy for your father or even may be some encumbrance to you, if your visiting engagements continue to increase as much as they have done lately. 
-Increase! 
+I hope I am aware that they may be too noisy for your father or even may be some encumbrance to you, if your visiting engagements continue to increase as much as they have done lately. Increase! 
 Certainly; you must be sensible that the last half-year has made a great difference in your way of life. 
 Difference! No indeed I am not. 
 There can be no doubt of your being much more engaged with company than you used to be. Witness this very time. Here am I come down for only one day, and you are engaged with a dinner-party! When did it happen before, or any thing like it? Your neighbourhood is increasing, and you mix more with it. A little while ago, every letter to Isabella brought an account of fresh gaieties; dinners at Mr. Cole's, or balls at the Crown. The difference which Randalls, Randalls alone makes in your goings-on, is very great. 
@@ -4237,8 +4230,7 @@ It is as well, perhaps, that I have not had the possibility. Had you not been su
 Oh! cried Jane, with a blush and an hesitation which Emma thought infinitely more becoming to her than all the elegance of all her usual composure there would have been no danger. The danger would have been of my wearying you. You could not have gratified me more than by expressing an interest . Indeed, Miss Woodhouse, (speaking more collectedly,) with the consciousness which I have of misconduct, very great misconduct, it is particularly consoling to me to know that those of my friends, whose good opinion is most worth preserving, are not disgusted to such a degree as to I have not time for half that I could wish to say. I long to make apologies, excuses, to urge something for myself. I feel it so very due. But, unfortunately in short, if your compassion does not stand my friend  
 Oh! you are too scrupulous, indeed you are, cried Emma warmly, and taking her hand. You owe me no apologies; and every body to whom you might be supposed to owe them, is so perfectly satisfied, so delighted even  
 You are very kind, but I know what my manners were to you. So cold and artificial! I had always a part to act. It was a life of deceit! I know that I must have disgusted you. 
-Pray say no more. I feel that all the apologies should be on my side. Let us forgive each other at once. We must do whatever is to be done quickest, and I think our feelings will lose no time there. I hope you have pleasant accounts from Windsor? 
-Very. 
+Pray say no more. I feel that all the apologies should be on my side. Let us forgive each other at once. We must do whatever is to be done quickest, and I think our feelings will lose no time there. I hope you have pleasant accounts from Windsor? Very. 
 And the next news, I suppose, will be, that we are to lose you just as I begin to know you. 
 Oh! as to all that, of course nothing can be thought of yet. I am here till claimed by Colonel and Mrs. Campbell. 
 Nothing can be actually settled yet, perhaps, replied Emma, smiling but, excuse me, it must be thought of. 
