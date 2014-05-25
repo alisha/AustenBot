@@ -77,8 +77,9 @@ while hasMessage is False:
 	while currentChar >= 0:
 		newMessage = message
 		char = newMessage[currentChar]
+		lastLetters = newMessage[currentChar-3:currentChar+1]
 		
-		if char is "." and (newMessage[currentChar-3:currentChar+1] is not " Mr." or " Ms." or "Mrs."):
+		if char is "." and "Mr." not in lastLetters and "Ms." not in lastLetters and "Mrs." not in lastLetters:
 			lastPeriod = currentChar
 			currentChar = -1
 		else:
