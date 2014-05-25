@@ -54,3 +54,4 @@ docs/_build/
 
 # Other
 secret.py
+key.pem
