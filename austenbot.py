@@ -65,37 +65,48 @@ def genTweet(array):
 			return tweetArray
 
 # Get and trim message
-hasMessage = False
-
-while hasMessage is False:
-	tweet = genTweet(createWordMap(wordLines))
-	message = ' '.join(tweet)
-	
-	currentChar = len(message) - 1
-	lastPeriod = 0
-
-	while currentChar >= 0:
-		newMessage = message
-		char = newMessage[currentChar]
-		lastLetters = newMessage[currentChar-3:currentChar+1]
+def createGoodTweet(wordLines):
+	hasMessage = False
+	while hasMessage is False:
+		tweet = genTweet(createWordMap(wordLines))
+		message = ' '.join(tweet)
 		
-		if char is "." and "Mr." not in lastLetters and "Ms." not in lastLetters and "Mrs." not in lastLetters:
-			lastPeriod = currentChar
-			currentChar = -1
-		else:
-			currentChar = currentChar - 1
+		currentChar = len(message) - 1
+		lastPeriod = 0
 
-	message = message[0:lastPeriod+1]
+		while currentChar >= 0:
+			newMessage = message
+			char = newMessage[currentChar]
+			lastLetters = newMessage[currentChar-3:currentChar+1]
+			
+			if char is "." and "Mr." not in lastLetters and "Ms." not in lastLetters and "Mrs." not in lastLetters:
+				lastPeriod = currentChar
+				currentChar = -1
+			else:
+				currentChar = currentChar - 1
 
-	if len(message) is not 1:
-		hasMessage = True
+		message = message[0:lastPeriod+1]
 
-print message
-print calculateChars(tweet)
+		if len(message) is not 1:
+			hasMessage = True
+
+	return message
 
 # Publish to Twitter
-auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+def tweet():
+	auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+	auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+	api = tweepy.API(auth)
 
-api = tweepy.API(auth)
-api.update_status(message)
+	while True:
+		tweeted = False
+		while tweeted is False:
+			message = createGoodTweet(wordLines)
+			try:
+				api.update_status(message)
+				tweeted = True
+			except TweepyError:
+				print "Found duplicate tweet"
+		time.sleep(7200)
+
+tweet()
