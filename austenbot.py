@@ -1,85 +1,98 @@
+#!/usr/bin/python
+
 from random import randrange
+import sys, os, tweepy
 from secret import *
-import tweepy, time, sys, collections
 
 # Get words
-corpus = open("corpus.txt", "r")
+corpusPath = os.path.dirname(os.path.realpath(__file__)) + "/corpus.txt"
+corpus = open(corpusPath, "r")
 wordLines = corpus.readlines()
 
 for line in range(0, len(wordLines)-2):
 	wordLines[line] = wordLines[line][:-1]
 
+corpus.close()
+
+# Store the start of sentences
+sentenceStarters = []
+
 # Create graph of words
 def createWordMap(wordLines):
 	wordMap = dict()
-	startWords = {}
-	startIndex = 0
 
 	for line in wordLines:
+		
 		words = line.split()
-		startWords[startIndex] = [words[0], words[1]]
-		startIndex += 1
 
+		endOfSentence = True
+		
 		for index in range(0,len(words)-2):
+			
+			# Add to list of sentence starters
+			if endOfSentence:
+				sentenceStarters.append((words[index], words[index + 1]))
+				endOfSentence = False
+
+			# Check if at the end of sentence
+			if words[index + 1] == "?" or words[index + 1] == "." or words[index + 1] == "!":
+				endOfSentence = True
+
+			# Add to word map
 			wordMap[(words[index], words[index + 1])] = words[index + 2]
 
-	return [startWords, wordMap]
-
-# Calculate the total number of characters in the elements of an array
-def calculateChars(array):
-	return len(' '.join(array))
+	return wordMap
 
 # Returns true if the contents of the array is under Twitter's character limit
 def underLimit(array):
-	if calculateChars(array) < 140:
-		return True
-	else:
-		return False
+	return len(' '.join(array)) < 140
 
 # Generate tweet
-# array has two elements: startWords and wordMap
-def genTweet(array):
-	startWords = array[0]
-	wordMap = array[1]
+def genTweet(wordMap):
+	index = randrange(len(sentenceStarters) - 1)
 
-	index = randrange(len(startWords))
-	nextWord = wordMap[(startWords[index][0], startWords[index][1])]
-	tweetArray = [startWords[index][0], startWords[index][1], nextWord]
-
-	currentIndex = 0
+	firstWord = sentenceStarters[index][0]
+	secondWord = sentenceStarters[index][1]
+	thirdWord = wordMap[(firstWord, secondWord)]
+	
+	# holds an array of all words in the tweet
+	tweetArray = [firstWord, secondWord, thirdWord]
 
 	while underLimit(tweetArray) is True:
 		end = len(tweetArray)
 		lastElements = [tweetArray[end-2], tweetArray[end-1]]
 
-		clonedArray = list(tweetArray)
+		clonedTweetArray = list(tweetArray)
 		
 		if (lastElements[0], lastElements[1]) in wordMap:
-			clonedArray.append(wordMap[(lastElements[0], lastElements[1])])
+			clonedTweetArray.append(wordMap[(lastElements[0], lastElements[1])])
 		else:
 			return tweetArray
 
-		if underLimit(clonedArray) is True:
-			tweetArray = clonedArray
+		if underLimit(clonedTweetArray) is True:
+			tweetArray = clonedTweetArray
 		else:
 			return tweetArray
 
 # Get and trim message
 def createGoodTweet(wordLines):
 	hasMessage = False
+	
 	while hasMessage is False:
+
+		# generate tweet array and turn into string
 		tweet = genTweet(createWordMap(wordLines))
 		message = ' '.join(tweet)
 		
+		# don't end on something like "mr."
 		currentChar = len(message) - 1
 		lastPeriod = 0
 
 		while currentChar >= 0:
 			newMessage = message
 			char = newMessage[currentChar]
-			lastLetters = newMessage[currentChar-3:currentChar+1]
 			
-			if char is "." and "Mr." not in lastLetters and "Ms." not in lastLetters and "Mrs." not in lastLetters:
+			if char is ".":
 				lastPeriod = currentChar
 				currentChar = -1
 			else:
@@ -87,8 +100,11 @@ def createGoodTweet(wordLines):
 
 		message = message[0:lastPeriod+1]
 
-		if len(message) is not 1:
+		if len(message) is not 1 and message[0].isalpha():
 			hasMessage = True
+
+	# capitalize first letter
+	message.capitalize()
 
 	return message
 
@@ -98,15 +114,11 @@ def tweet():
 	auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 	api = tweepy.API(auth)
 
-	while True:
-		tweeted = False
-		while tweeted is False:
-			message = createGoodTweet(wordLines)
-			try:
-				api.update_status(message)
-				tweeted = True
-			except TweepyError:
-				print "Found duplicate tweet"
-		time.sleep(7200)
+	message = createGoodTweet(wordLines)
+	try:
+		api.update_status(message)
+		tweeted = True
+	except TweepyError:
+		print "Found duplicate tweet"
 
 tweet()
